@@ -18,7 +18,9 @@ public class controlerTest {
     @FXML
     private  Label l3;
     public void Next() throws Exception{
-
+        Stage window = (Stage) testbt1.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        window.setScene(new Scene(root));
     }
     int contor=0;
 
