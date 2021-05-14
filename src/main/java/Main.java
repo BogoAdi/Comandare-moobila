@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
+        UserService.initDatabase();
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("test.fxml"));
         primaryStage.setTitle("Comanda Mobila");

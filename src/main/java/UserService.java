@@ -3,6 +3,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Objects;
+
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 
@@ -56,7 +57,18 @@ public class UserService  {
         }
         return md;
     }
-
+    public static String getUserRole(String username, String password) throws AccountException {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername()))
+            {
+                if (Objects.equals(encodePassword(username,password), user.getPassword()))
+                    return user.getRole();
+                else
+                    throw new IncorrectPassword(password);
+            }
+        }
+        throw new UsernameNotExists(username);
+    }
 
 
 

@@ -3,7 +3,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileServices {
-    public static String APPLICATION_FOLDER = ".mobila-databases";
+    public static String APPLICATION_FOLDER = ".comandare-mobila-databases";
     private static final String USER_FOLDER = System.getProperty("user.home");
 
     public static Path getPathToFile(String... path) {
