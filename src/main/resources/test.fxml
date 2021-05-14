@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controlerTest">
+<children>
+<Label fx:id="lb" alignment="CENTER" layoutY="-5.0" prefHeight="121.0" prefWidth="773.0" style="-fx-background-color: #d2691e;" text="Comandare-Mobila" textAlignment="CENTER">
+    <font>
+        <Font size="24.0" />
+    </font></Label>
+<Button fx:id="testbt1" layoutX="492.0" layoutY="445.0" mnemonicParsing="false" onAction="#Next" prefHeight="48.0" prefWidth="152.0" text="Inainte">
+    <font>
+        <Font size="20.0" />
+    </font></Button>
+<Label fx:id="l1" layoutX="168.0" layoutY="142.0" prefHeight="57.0" prefWidth="336.0">
+    <font>
+        <Font size="20.0" />
+    </font></Label>
+<Label fx:id="l2" layoutX="168.0" layoutY="182.0" prefHeight="34.0" prefWidth="522.0">
+    <font>
+        <Font size="20.0" />
+    </font></Label>
+<Label fx:id="l3" layoutX="168.0" layoutY="216.0" prefHeight="21.0" prefWidth="501.0">
+    <font>
+        <Font size="20.0" />
+    </font></Label>
+<Label layoutX="220.0" layoutY="298.0" prefHeight="21.0" prefWidth="398.0" text="Pentru a continua apasati &quot;Inainte&quot;.">
+    <font>
+        <Font size="20.0" />
+    </font></Label>
+<Button fx:id="testbt2" layoutX="108.0" layoutY="445.0" mnemonicParsing="false" onAction="#info" prefHeight="48.0" prefWidth="152.0" style="-fx-border-radius: 30px;" text="Info">
+    <font>
+        <Font size="20.0" />
+    </font></Button>
+</children>
+        </AnchorPane>
+
