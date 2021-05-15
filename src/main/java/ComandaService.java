@@ -20,6 +20,23 @@ public class ComandaService {
         comandaRepository.insert(new Comanda (client,oras, strada,numar,produs,asistenta,Data));
     }
 
+    public static ArrayList<Comanda> comenzi() {
+        ArrayList<Comanda> list = new ArrayList<>();
+        for(Comanda comanda : comandaRepository.find()) {
+            list.add(comanda);
+        }
+        return list;
+
+    }
+
+    public static ArrayList<Comanda> comenzi(String currentUser) {
+        ArrayList<Comanda> list = new ArrayList<>();
+        for(Comanda comanda : comandaRepository.find()) {
+            if(comanda.getClient().equals(currentUser))
+                list.add(comanda);
+        }
+        return list;
+    }
 
 
 
