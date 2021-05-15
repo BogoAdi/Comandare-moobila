@@ -4,6 +4,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -26,13 +27,13 @@ public class RealizareComanda {
     @FXML
     private ChoiceBox<String> alegereProdus;
     @FXML
-    private TextField numeClient;
+    TextField numeClient;
     @FXML
-    private TextField oras;
+     TextField oras;
     @FXML
-    private TextField strada;
+     TextField strada;
     @FXML
-    private TextField numarCasa;
+     TextField numarCasa;
     @FXML
     Button sendButton;
     @FXML

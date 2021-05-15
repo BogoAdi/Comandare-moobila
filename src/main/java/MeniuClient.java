@@ -23,7 +23,7 @@ public class MeniuClient  {
 
 
     public void RealizareComanda() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("RealizareComanda.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("realizareComanda.fxml"));
         window1 = (Stage)ComandaButton.getScene().getWindow();
         window1.setScene(new Scene(root));
     }
