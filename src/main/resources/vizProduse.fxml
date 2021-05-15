@@ -24,7 +24,7 @@
                 <TableColumn fx:id="pretColoana" prefWidth="216.0" text="Pret Produs" />
             </columns>
         </TableView>
-        <Button fx:id="VPButton" layoutX="365.0" layoutY="500.0" mnemonicParsing="false"  prefHeight="42.0" prefWidth="133.0" text="Inapoi" />
+        <Button fx:id="VPButton" layoutX="365.0" layoutY="500.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="42.0" prefWidth="133.0" text="Inapoi" />
     </children>
 </AnchorPane>
 
