@@ -58,7 +58,11 @@ public class VizComenziManager {
 
 
     }
-
+        public void goBack()throws Exception {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuManager.fxml"));
+                window1 = (Stage)backButton.getScene().getWindow();
+                window1.setScene(new Scene(root));
+        }
 
     }
-}
+
