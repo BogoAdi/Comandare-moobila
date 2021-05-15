@@ -5,16 +5,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
+
 import javafx.stage.Stage;
 
-import java.awt.*;
+import javafx.scene.control.Button;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import javafx.scene.control.Button;
+
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -25,7 +25,7 @@ public class RealizareComanda {
     @FXML
     Button BackButton;
     @FXML
-    private ChoiceBox<String> alegereProdus;
+     ChoiceBox<String> alegereProdus;
     @FXML
     TextField numeClient;
     @FXML
@@ -36,14 +36,14 @@ public class RealizareComanda {
      TextField numarCasa;
     @FXML
     Button sendButton;
-    @FXML
-    private Text mesaj;
+
     @FXML
     private CheckBox checkBox;
+
     public void initialize() {
         ArrayList<String> produse = new ArrayList<>();
-        for (Produs produs : ProdusService.Produs())
-            produse.add(produs.getTot());
+        for (Produs pito : ProdusService.pprodus())
+            produse.add(pito.getTot());
         alegereProdus.getItems().addAll(produse);
 
     }
@@ -57,7 +57,7 @@ public class RealizareComanda {
             return;
         }
         if(oras.getText().equals("")){
-            showMessageDialog(null, "Completati  nume si prenume!");
+            showMessageDialog(null, "Completati Orasul!");
             return;
         }
         if(strada.getText().equals("")){
@@ -76,6 +76,7 @@ public class RealizareComanda {
 
 
         Produs produs=ProdusService.getMobila(alegereProdus.getValue());
+
         ComandaService.adaugareComanda(User.getCurrentUser(),oras.getText(),strada.getText(),numarCasa.getText(),produs,checkBox.isSelected(),Data);
 
 

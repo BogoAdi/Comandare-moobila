@@ -45,7 +45,7 @@ public class VizIstoricComenzi {
 
 
         public void goBack()throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MeniuClient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuClient.fxml"));
         window1 = (Stage)backButton.getScene().getWindow();
         window1.setScene(new Scene(root));
     }

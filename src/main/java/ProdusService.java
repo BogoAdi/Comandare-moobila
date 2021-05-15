@@ -29,7 +29,7 @@ public class ProdusService {
                 throw new ProdusExistent(nume,lemn);
         }
     }
-    public static ArrayList<Produs> Produs() {
+    public static ArrayList<Produs> pprodus() {
         ArrayList<Produs> list = new ArrayList<>();
         for(Produs prod : produseRepository.find()) {
             list.add(prod);
@@ -43,7 +43,7 @@ public class ProdusService {
 
     public static Produs getMobila(String numeProdus){
         for(Produs p1 : produseRepository.find())
-            if(Objects.equals(numeProdus, p1.getNume()))
+            if(numeProdus.equals( p1.getTot()))
                 return p1;
         return null;
     }

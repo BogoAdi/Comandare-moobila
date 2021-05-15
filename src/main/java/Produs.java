@@ -19,8 +19,10 @@ public class Produs {
     public  String getLemn(){return lemn;}
 
     public  String getNume(){ return nume;}
+
     public String getTot(){String s=nume+" "+lemn+" "+pret;
         return s;}
+
     public void setNume(String nume) {
         this.nume=nume;
     }

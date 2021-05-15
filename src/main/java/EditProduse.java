@@ -30,7 +30,7 @@ public class EditProduse {
     @FXML
     private TableColumn<Produs,Integer> pretColoana;
 
-    private ObservableList<Produs> produse = FXCollections.observableArrayList(ProdusService.Produs());
+    private ObservableList<Produs> produse = FXCollections.observableArrayList(ProdusService.pprodus());
     public void initialize() {
         produsColoana.setCellValueFactory(new PropertyValueFactory<>("nume"));
         lemnColoana.setCellValueFactory(new PropertyValueFactory<>("lemn"));
