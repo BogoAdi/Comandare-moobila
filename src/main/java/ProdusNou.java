@@ -30,6 +30,21 @@ public class ProdusNou{
             window1 = (Stage)backButton.getScene().getWindow();
             window1.setScene(new Scene(root));
         }
+    public void addProduct(){
+        try{
+
+            ProdusService.checkProdusDoesNotAlreadyExist(nume.getText(),lemn.getText());
+            ProdusService.addProdus(nume.getText(), lemn.getText(), Integer.parseInt(pret.getText()));
+
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuManager.fxml"));
+            window1 = (Stage)backButton.getScene().getWindow();
+            window1.setScene(new Scene(root));
+
+        }catch (Exception e){
+            mesaj.setText(e.getMessage());
+        }
+
+    }
 
 
 

@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -5,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class EditProduse {
@@ -27,10 +30,14 @@ public class EditProduse {
     @FXML
     private TableColumn<Produs,Integer> pretColoana;
 
+    private ObservableList<Produs> produse = FXCollections.observableArrayList(ProdusService.Produs());
+    public void initialize() {
+        produsColoana.setCellValueFactory(new PropertyValueFactory<>("nume"));
+        lemnColoana.setCellValueFactory(new PropertyValueFactory<>("lemn"));
+        pretColoana.setCellValueFactory(new PropertyValueFactory<>("pret"));
 
-
-
-
+        tableaProduse.setItems(produse);
+    }
 
     public void goButton() throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuManager.fxml"));
@@ -44,6 +51,8 @@ public class EditProduse {
 
 
     public void addProduct() throws  Exception{
-
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("NewProduct.fxml"));
+        window1 = (Stage)addButton.getScene().getWindow();
+        window1.setScene(new Scene(root));
     }
 }
