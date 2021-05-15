@@ -84,6 +84,11 @@ public class RealizareComanda {
         Stage window = (Stage) sendButton.getScene().getWindow();
         window.setScene(new Scene(root));
     }
+    public void GoBack() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuClient.fxml"));
+        window1 = (Stage)BackButton.getScene().getWindow();
+        window1.setScene(new Scene(root));
+    }
 
 }
 
