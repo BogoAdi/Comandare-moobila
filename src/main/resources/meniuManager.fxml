@@ -13,7 +13,7 @@
             prefHeight="400.0" prefWidth="600.0">
         <children>
             <Button fx:id="viewButton" layoutX="236.0" layoutY="179.0" mnemonicParsing="false"  prefHeight="52.0" prefWidth="173.0" text="Vizualizare Comenzi" />
-            <Button fx:id="editButton" layoutX="236.0" layoutY="252.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="173.0" text="Editarea Produse" />
+            <Button fx:id="editButton" layoutX="236.0" layoutY="252.0" mnemonicParsing="false" onAction="#goToEditPage" prefHeight="38.0" prefWidth="173.0" text="Editarea Produse" />
             <Button fx:id="backButton" layoutX="237.0" layoutY="322.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="173.0" text="Inapoi" />
             <Label layoutX="281.0" layoutY="36.0" text="Meniu ">
                 <font>
