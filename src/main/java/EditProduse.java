@@ -46,8 +46,18 @@ public class EditProduse {
     }
 
     public void DeleteProdus()throws  Exception {
+            ObservableList<Produs> produsAles;
+            produsAles = tableaProduse.getSelectionModel().getSelectedItems();
+            for(Produs produsul : produsAles) {
+                ProdusService.stergereProdus(produsul);
+            }
 
-    }
+            //Reintoarcere la pagina de Editare Produse
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("editProduse.fxml"));
+            window1 = (Stage)deleteButton.getScene().getWindow();
+            window1.setScene(new Scene(root));
+        }
+
 
 
     public void addProduct() throws  Exception{

@@ -4,6 +4,8 @@ import org.dizitart.no2.objects.ObjectRepository;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import static org.dizitart.no2.objects.filters.ObjectFilters.eq;
+
 public class ProdusService {
     private static ObjectRepository<Produs> produseRepository;
 
@@ -34,4 +36,8 @@ public class ProdusService {
         }
         return list;
     }
+    public static void stergereProdus(Produs produs){
+        produseRepository.remove(eq("nume", produs.getNume()));
+    }
+
 }
