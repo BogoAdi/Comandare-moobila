@@ -42,17 +42,17 @@ public class LoginControler{
             User.setCurrentUser(ultiC.getText());
 
             if(role.equals("Client")){
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client1.fxml"));
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuClient.fxml"));
                 Scene nextScene = new Scene(root);
                 Prim.setScene(nextScene);
-           ;
+
             }
             else{
                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuManager.fxml"));
                 Scene nextScene = new Scene(root);
 
                 Prim.setScene(nextScene);
-                ;//Pagina Meniu Manager
+
             }
         }catch (AccountException e) {
             registrationMessage.setText(e.getMessage());
