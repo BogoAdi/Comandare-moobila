@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="RealizareComanda"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <JFXButton  layoutX="41.0" layoutY="546.0" mnemonicParsing="false"  prefHeight="43.0" prefWidth="95.0" text="Inapoi" />
+        <Label alignment="CENTER" prefHeight="102.0" prefWidth="709.0" text="Realizare Comanda">
+            <font>
+                <Font size="39.0" />
+            </font>
+        </Label>
+        <Button layoutX="554.0" layoutY="546.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="109.0" text="Trimite" />
+        <Label layoutX="149.0" layoutY="134.0" prefHeight="21.0" prefWidth="132.0" text="Nume" />
+        <Label layoutX="150.0" layoutY="182.0" prefHeight="21.0" prefWidth="132.0" text="Oras" />
+        <Label layoutX="152.0" layoutY="223.0" prefHeight="21.0" prefWidth="132.0" text="Strada" />
+        <Label layoutX="149.0" layoutY="268.0" prefHeight="21.0" prefWidth="132.0" text="NumarCasa" />
+        <Label layoutX="151.0" layoutY="318.0" prefHeight="21.0" prefWidth="132.0" text="Produs" />
+        <TextField layoutX="303.0" layoutY="132.0" prefHeight="31.0" prefWidth="316.0" promptText="ex: George Popescu" />
+        <TextField  layoutX="303.0" layoutY="180.0" prefHeight="31.0" prefWidth="316.0" promptText="ex: Timisoara" />
+        <TextField  layoutX="303.0" layoutY="221.0" prefHeight="31.0" prefWidth="316.0" promptText="ex:Primaverii" />
+        <TextField  layoutX="303.0" layoutY="263.0" prefHeight="31.0" prefWidth="316.0" promptText="ex:14B" />
+        <ChoiceBox fx:id="alegereProdus" layoutX="303.0" layoutY="313.0" prefHeight="31.0" prefWidth="200.0" />
+        <CheckBox fx:id="checkBox" layoutX="159.0" layoutY="390.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="439.0" text="Doresc asistenta Montare" />
+        <Text fx:id="mesaj" layoutX="218.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="245.0" />
+    </children>
+</AnchorPane>
