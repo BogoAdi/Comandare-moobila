@@ -21,7 +21,9 @@ public class meniuManager {
 
 
     public void ViewOrders() throws Exception {
-
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("vizComenziManager.fxml"));
+        window1 = (Stage)viewButton.getScene().getWindow();
+        window1.setScene(new Scene(root));
     }
 
 
