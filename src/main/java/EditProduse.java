@@ -51,7 +51,7 @@ public class EditProduse {
 
 
     public void addProduct() throws  Exception{
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("NewProduct.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("produsNou.fxml"));
         window1 = (Stage)addButton.getScene().getWindow();
         window1.setScene(new Scene(root));
     }
