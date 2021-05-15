@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ProdusNou"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Button fx:id="backButton" layoutX="155.0" layoutY="357.0" mnemonicParsing="false" onAction="#goBack" prefHeight="43.0" prefWidth="122.0" text="Inapoi" />
+        <Label layoutX="142.0" layoutY="121.0" prefHeight="21.0" prefWidth="115.0" text="Nume Produs:" />
+        <Label layoutX="148.0" layoutY="168.0" prefHeight="21.0" prefWidth="115.0" text="Tip Lemn" />
+        <Label layoutX="148.0" layoutY="220.0" prefHeight="21.0" prefWidth="115.0" text="Pret" />
+        <TextField fx:id="nume" layoutX="365.0" layoutY="116.0" />
+        <TextField fx:id="lemn" layoutX="365.0" layoutY="163.0" />
+        <TextField fx:id="pret" layoutX="365.0" layoutY="220.0" />
+        <Button fx:id="addButton" layoutX="438.0" layoutY="357.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="43.0" prefWidth="122.0" text="Adaugare" />
+        <Label layoutX="299.0" layoutY="31.0" prefHeight="43.0" prefWidth="151.0" text="Creare Produs Nou" />
+        <Text fx:id="mesaj" layoutX="361.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="56.0" />
+    </children>
+</AnchorPane>

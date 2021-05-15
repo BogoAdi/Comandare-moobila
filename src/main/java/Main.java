@@ -13,7 +13,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         UserService.initDatabase();
-
+        //initializare Baza de date de produse
+        ProdusService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("test.fxml"));
         primaryStage.setTitle("Comanda Mobila");
         primaryStage.setScene(new Scene(root));
