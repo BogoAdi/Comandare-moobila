@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -20,7 +20,7 @@
                 <Font size="39.0" />
             </font>
         </Label>
-        <Button layoutX="554.0" layoutY="546.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="109.0" text="Trimite" />
+        <Button fx:id="sendButton" layoutX="554.0" layoutY="546.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="109.0" text="Trimite" />
         <Label layoutX="149.0" layoutY="134.0" prefHeight="21.0" prefWidth="132.0" text="Nume" />
         <Label layoutX="150.0" layoutY="182.0" prefHeight="21.0" prefWidth="132.0" text="Oras" />
         <Label layoutX="152.0" layoutY="223.0" prefHeight="21.0" prefWidth="132.0" text="Strada" />

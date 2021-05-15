@@ -40,4 +40,11 @@ public class ProdusService {
         produseRepository.remove(eq("nume", produs.getNume()));
     }
 
+
+    public static Produs getMobila(String numeProdus){
+        for(Produs p1 : produseRepository.find())
+            if(Objects.equals(numeProdus, p1.getNume()))
+                return p1;
+        return null;
+    }
 }
