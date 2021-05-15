@@ -11,8 +11,8 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MeniuClient">
    <children>
       <Button fx:id="ComandaButton" layoutX="223.0" layoutY="198.0" mnemonicParsing="false" onAction="#RealizareComanda" prefHeight="31.0" prefWidth="173.0" text="Realizare Comanda" />
-      <Button fx:id="IstoricButton" layoutX="226.0" layoutY="258.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="173.0" text="Istoric Comenzi" />
-      <Button fx:id="ViewProductsButton" layoutX="229.0" layoutY="319.0" mnemonicParsing="false"  prefHeight="31.0" prefWidth="167.0" text="Vizualizare Produse" />
+      <Button fx:id="IstoricButton" layoutX="226.0" layoutY="258.0" mnemonicParsing="false"  onAction="#IstoricComenzi" prefHeight="31.0" prefWidth="173.0" text="Istoric Comenzi" />
+      <Button fx:id="ViewProductsButton" layoutX="229.0" layoutY="319.0" mnemonicParsing="false" onAction="#VizualizareProduse"  prefHeight="31.0" prefWidth="167.0" text="Vizualizare Produse" />
       <Button fx:id="LOB" layoutX="229.0" layoutY="388.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="167.0" text="Log Out" />
       <Label layoutX="168.0" layoutY="67.0" prefHeight="75.0" prefWidth="333.0" text="      Meniu Client" textAlignment="CENTER">
          <font>

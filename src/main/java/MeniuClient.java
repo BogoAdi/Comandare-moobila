@@ -19,7 +19,17 @@ public class MeniuClient  {
     private Button IstoricButton;
 
 
+    public void VizualizareProduse() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/VizProduse.fxml"));
+        window1 = (Stage)ViewProductsButton.getScene().getWindow();
+        window1.setScene(new Scene(root));
+    }
 
+    public void IstoricComenzi()throws Exception {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/VizIstoric.fxml"));
+        window1 = (Stage)IstoricButton.getScene().getWindow();
+        window1.setScene(new Scene(root));
+    }
 
 
     public void RealizareComanda() throws Exception{
