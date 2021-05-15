@@ -48,7 +48,7 @@ public class LoginControler{
            ;
             }
             else{
-               Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniu1.fxml"));
+               Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuManager.fxml"));
                 Scene nextScene = new Scene(root);
 
                 Prim.setScene(nextScene);

@@ -12,7 +12,7 @@
             fx:controller="EditProduse"
             prefHeight="400.0" prefWidth="600.0">
     <children>
-        <Button fx:id="backButton" layoutX="52.0" layoutY="439.0" mnemonicParsing="false"  prefHeight="41.0" prefWidth="122.0" text="Inapoi" />
+        <Button fx:id="backButton" layoutX="52.0" layoutY="439.0" mnemonicParsing="false" onAction="#goButton" prefHeight="41.0" prefWidth="122.0" text="Inapoi" />
         <Button fx:id="deleteButton" layoutX="324.0" layoutY="439.0" mnemonicParsing="false"  prefHeight="41.0" prefWidth="139.0" text="Stergere Produs" />
         <Button fx:id="addButton" layoutX="594.0" layoutY="439.0" mnemonicParsing="false"  prefHeight="41.0" prefWidth="139.0" text="Adaugare produs" />
         <TableView fx:id="tableaProduse" layoutX="119.0" layoutY="109.0" prefHeight="262.0" prefWidth="584.0">
