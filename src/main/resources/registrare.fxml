@@ -1,46 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-
 <?import javafx.scene.text.Text?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
-<GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="600" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="registrare">
+
+<?import com.jfoenix.controls.JFXButton?>
+<GridPane alignment="center" hgap="10" prefHeight="422.0" prefWidth="624.0" stylesheets="@style5.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registrare">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
-    <Text id="title-text" text="Create new account" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
-        <font>
-            <Font size="40.0" />
-        </font></Text>
-
-    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-
-    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-    <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-
-    <ChoiceBox fx:id="role" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+   <children>
+       <Text id="title-text" fill="#0719a4" text="Creare Cont Nou" textAlignment="CENTER" wrappingWidth="435.0703125" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+           <font>
+               <Font size="40.0" />
+           </font>
+      </Text>
+   
+       <Label prefHeight="30.0" prefWidth="188.0" text="Nume de utilizator" textFill="#050a9a" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+   
+       <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+       <Label alignment="CENTER" prefHeight="31.0" prefWidth="187.0" text="Parola:" textFill="#052794" GridPane.columnIndex="0" GridPane.rowIndex="2">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+   
+       <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   
+       <Label alignment="CENTER" prefHeight="30.0" prefWidth="188.0" text="Rol:" textFill="#091b94" GridPane.columnIndex="0" GridPane.rowIndex="3">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+   
+       <ChoiceBox fx:id="role" prefHeight="31.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
     </ChoiceBox>
-
-    <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-
-    <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="5">
-        <Button onAction="#handleBackAction" text="Back to log in" />
-    </HBox>
-
-    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
-        <Button onAction="#handleRegisterAction" text="Register" />
-    </HBox>
+   
+       <Text fx:id="registrationMessage" fill="#dacece" wrappingWidth="233.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font size="22.0" />
+         </font></Text>
+   
+       <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="5">
+      <children>
+              <JFXButton onAction="#handleBackAction" prefHeight="43.0" prefWidth="148.0" text="Inapoi" textFill="#940404">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXButton>
+      </children>
+       </HBox>
+   
+       <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <children>
+              <JFXButton onAction="#handleRegisterAction" prefHeight="47.0" prefWidth="176.0" text="Inregistrare" textFill="#b50606">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXButton>
+      </children>
+       </HBox>
+   </children>
     <columnConstraints>
         <ColumnConstraints />
         <ColumnConstraints />

@@ -6,40 +6,53 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="600" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginControler">
+<?import com.jfoenix.controls.JFXButton?>
+<GridPane alignment="center" hgap="10" prefHeight="390.0" prefWidth="723.0" stylesheets="@style5.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginControler">
         <padding>
             <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
         </padding>
         <children>
-            <Text id="title-text" text="Autentificare" textAlignment="CENTER" wrappingWidth="265.1025390625" GridPane.columnSpan="2">
+            <Text id="title-text" fill="#2111b2" text="Autentificare" textAlignment="CENTER" wrappingWidth="507.1025390625" GridPane.columnSpan="2">
                 <font>
                     <Font size="31.0" />
                 </font>
             </Text>
 
-            <Label text="Nume de utilizator" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="Nume de utilizator" textFill="#0909a4" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
 
             <TextField fx:id="ultiC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-            <Label prefHeight="21.0" prefWidth="90.0" text="Parola" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label prefHeight="21.0" prefWidth="90.0" text="Parola" textFill="#1a088d" GridPane.columnIndex="0" GridPane.rowIndex="2">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
 
             <PasswordField fx:id="passC" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
             <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="5">
          <children>
-                    <Button fx:id="CreeazaContB" onAction="#handleCreateAccountAction" prefHeight="45.0" prefWidth="165.0" text="Creaza un nou cont" />
+                    <JFXButton fx:id="CreeazaContB" onAction="#handleCreateAccountAction" prefHeight="45.0" prefWidth="249.0" text="Creaza un nou cont" textFill="#d71111">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXButton>
          </children>
             </HBox>
             <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <children>
-                    <Button fx:id="lgB" onAction="#handleLoginAction" prefHeight="42.0" prefWidth="139.0" text="Log in" />
+                    <JFXButton fx:id="lgB" onAction="#handleLoginAction" prefHeight="42.0" prefWidth="222.0" text="Log in" textFill="#b51010">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXButton>
          </children>
             </HBox>
         </children>
         <columnConstraints>
-            <ColumnConstraints />
-            <ColumnConstraints />
+            <ColumnConstraints maxWidth="250.0" minWidth="207.0" prefWidth="245.0" />
+            <ColumnConstraints maxWidth="291.0" minWidth="248.0" prefWidth="253.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints />

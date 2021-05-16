@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.text.Font?>
+
 <?import com.jfoenix.controls.JFXButton?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="VizComenziManager"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="495.0" prefWidth="1084.0" style="-fx-background-color: #c0955d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VizComenziManager">
     <children>
-        <JFXButton fx:id="backButton" layoutX="376.0" layoutY="435.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" text="Inapoi" />
-        <Label layoutX="317.0" layoutY="38.0" prefHeight="39.0" prefWidth="240.0" text="Istoric Comenzi" AnchorPane.topAnchor="38.0">
+        <JFXButton fx:id="backButton" layoutX="479.0" layoutY="430.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="121.0" text="Inapoi" textFill="#9e0a0a">
+         <font>
+            <Font size="21.0" />
+         </font></JFXButton>
+        <Label alignment="CENTER" layoutX="1.0" layoutY="36.0" prefHeight="39.0" prefWidth="1083.0" text="Istoric Comenzi" textFill="#072490" AnchorPane.topAnchor="36.0">
             <font>
                 <Font size="27.0" />
             </font></Label>
-        <TableView fx:id="comenziTabel" layoutX="13.0" layoutY="88.0" prefHeight="324.0" prefWidth="834.0">
+        <TableView fx:id="comenziTabel" layoutX="23.0" layoutY="87.0" prefHeight="324.0" prefWidth="1015.0" style="-fx-background-color: #c27e00;">
             <columns>
-                <TableColumn fx:id="produsColoana" prefWidth="93.0" text="Produs" />
-                <TableColumn fx:id="lemnColoana" prefWidth="97.0" text="Lemn" />
-                <TableColumn fx:id="pretColoana" prefWidth="81.0" text="Pret" />
-                <TableColumn fx:id="orasColoana" prefWidth="112.0" text="Oras" />
-                <TableColumn fx:id="stradaColoana" prefWidth="114.0" text="Strada" />
-                <TableColumn fx:id="numarColoana" prefWidth="181.0" text="NumarCasa" />
-                <TableColumn fx:id="asistentaColoana" prefWidth="121.0" text="Asistenta" />
+                <TableColumn fx:id="numeColoana" prefWidth="135.0" style="-fx-background-color: #c27e00;" text="Nume si Prenume" />
+                <TableColumn fx:id="produsColoana" prefWidth="84.0" style="-fx-background-color: #c27e00;" text="Produs" />
+                <TableColumn fx:id="lemnColoana" prefWidth="103.0" style="-fx-background-color: #c27e00;" text="Lemn" />
+                <TableColumn fx:id="pretColoana" prefWidth="121.0" style="-fx-background-color: #c27e00;" text="Pret" />
+                <TableColumn fx:id="orasColoana" prefWidth="69.0" style="-fx-background-color: #c27e00;" text="Oras" />
+                <TableColumn fx:id="stradaColoana" prefWidth="118.0" style="-fx-background-color: #c27e00;" text="Strada" />
+                <TableColumn fx:id="numarColoana" prefWidth="125.0" style="-fx-background-color: #c27e00;" text="Numar Casa" />
+            <TableColumn fx:id="dataColoana" prefWidth="157.0" style="-fx-background-color: #c27e00;" text="Data" />
+            <TableColumn fx:id="asistentaColoana" prefWidth="102.0" style="-fx-background-color: #c27e00;" text="Asistenta" />
             </columns>
         </TableView>
     </children>
 </AnchorPane>
-

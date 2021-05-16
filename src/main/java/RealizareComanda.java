@@ -71,13 +71,13 @@ public class RealizareComanda {
         String Data;
 
         Date date = Calendar.getInstance().getTime();
-        DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy , hh ");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY , HH mm ");
         Data = dateFormat.format(date);
 
 
         Produs produs=ProdusService.getMobila(alegereProdus.getValue());
 
-        ComandaService.adaugareComanda(User.getCurrentUser(),oras.getText(),strada.getText(),numarCasa.getText(),produs,checkBox.isSelected(),Data);
+        ComandaService.adaugareComanda(User.getCurrentUser(),numeClient.getText(),oras.getText(),strada.getText(),numarCasa.getText(),produs,checkBox.isSelected(),Data);
 
 
 

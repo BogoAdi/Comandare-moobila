@@ -16,8 +16,8 @@ public class ComandaService {
 
     }
 
-    public static void adaugareComanda(String client, String oras , String strada, String numar, Produs produs,Boolean asistenta,String Data) {
-        comandaRepository.insert(new Comanda (client,oras, strada,numar,produs,asistenta,Data));
+    public static void adaugareComanda(String client, String numeSiPrenume,String oras , String strada, String numar, Produs produs,Boolean asistenta,String Data) {
+        comandaRepository.insert(new Comanda (client,numeSiPrenume,oras, strada,numar,produs,asistenta,Data));
     }
 
     public static ArrayList<Comanda> comenzi() {
@@ -26,7 +26,6 @@ public class ComandaService {
             list.add(comanda);
         }
         return list;
-
     }
 
     public static ArrayList<Comanda> comenzi(String currentUser) {

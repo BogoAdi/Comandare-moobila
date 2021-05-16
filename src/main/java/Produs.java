@@ -20,7 +20,7 @@ public class Produs {
 
     public  String getNume(){ return nume;}
 
-    public String getTot(){String s=nume+" "+lemn+" "+pret;
+    public String getTot(){String s=nume+" de "+lemn+" cu pretul de "+pret+" lei";
         return s;}
 
     public void setNume(String nume) {

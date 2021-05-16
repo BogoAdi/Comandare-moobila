@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="EditProduse"
-            prefHeight="400.0" prefWidth="600.0">
+
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane prefHeight="498.0" prefWidth="761.0" style="-fx-background-color: #e3f988;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditProduse">
     <children>
-        <Button fx:id="backButton" layoutX="52.0" layoutY="439.0" mnemonicParsing="false" onAction="#goButton" prefHeight="41.0" prefWidth="122.0" text="Inapoi" />
-        <Button fx:id="deleteButton" layoutX="324.0" layoutY="439.0" mnemonicParsing="false" onAction="#DeleteProdus" prefHeight="41.0" prefWidth="139.0" text="Stergere Produs" />
-        <Button fx:id="addButton" layoutX="594.0" layoutY="439.0" mnemonicParsing="false" onAction="#addProduct"  prefHeight="41.0" prefWidth="139.0" text="Adaugare produs" />
-        <TableView fx:id="tableaProduse" layoutX="119.0" layoutY="109.0" prefHeight="262.0" prefWidth="584.0">
+        <JFXButton fx:id="backButton" layoutX="52.0" layoutY="439.0" mnemonicParsing="false" onAction="#goButton" prefHeight="41.0" prefWidth="122.0" text="Inapoi">
+         <font>
+            <Font size="28.0" />
+         </font></JFXButton>
+        <JFXButton fx:id="deleteButton" layoutX="275.0" layoutY="439.0" mnemonicParsing="false" onAction="#DeleteProdus" prefHeight="48.0" prefWidth="213.0" text="Stergere Produs">
+         <font>
+            <Font size="22.0" />
+         </font></JFXButton>
+        <JFXButton fx:id="addButton" layoutX="557.0" layoutY="439.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="56.0" prefWidth="196.0" text="Adaugare produs">
+         <font>
+            <Font size="21.0" />
+         </font></JFXButton>
+        <TableView fx:id="tableaProduse" layoutX="119.0" layoutY="109.0" prefHeight="262.0" prefWidth="584.0" style="-fx-background-color: #ffdb58;">
             <columns>
-                <TableColumn fx:id="produsColoana" prefWidth="181.0" text="Produs" />
-                <TableColumn fx:id="lemnColoana" prefWidth="183.0" text="Lemn" />
-                <TableColumn fx:id="pretColoana" prefWidth="219.0" text="Pret" />
+                <TableColumn fx:id="produsColoana" prefWidth="181.0" style="-fx-background-color: #ffdb58;" text="Produs" />
+                <TableColumn fx:id="lemnColoana" prefWidth="183.0" style="-fx-background-color: #ffdb58;" text="Lemn" />
+                <TableColumn fx:id="pretColoana" prefWidth="219.0" style="-fx-background-color: #ffdb58;" text="Pret" />
             </columns>
         </TableView>
-        <Label layoutX="264.0" layoutY="24.0" prefHeight="49.0" prefWidth="259.0" text="Editare Produse">
+        <Label alignment="CENTER" layoutY="24.0" prefHeight="49.0" prefWidth="753.0" text="Editare Produse">
             <font>
                 <Font size="33.0" />
             </font>

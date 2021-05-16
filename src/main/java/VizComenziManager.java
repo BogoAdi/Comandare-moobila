@@ -19,17 +19,18 @@ public class VizComenziManager {
         @FXML
         private TableColumn<Comanda, String> produsColoana;
         @FXML
-        private TableColumn<Produs, String> lemnColoana;
-
+        private TableColumn<Comanda, String> lemnColoana;
         @FXML
-        private TableColumn<Produs, Integer> pretColoana;
+        private TableColumn<Comanda,String> numeColoana;
+        @FXML
+        private TableColumn<Comanda, Integer> pretColoana;
         @FXML
         private TableColumn<Comanda, String> orasColoana;
         @FXML
         private TableColumn<Comanda, String> stradaColoana;
         @FXML
         private TableColumn<Comanda, String> numarColoana;
-
+        @FXML TableColumn<Comanda, String> dataColoana;
         @FXML
         private TableColumn<Comanda, Boolean>  asistentaColoana;
 
@@ -45,7 +46,7 @@ public class VizComenziManager {
 
 
         public void initialize() {
-
+        numeColoana.setCellValueFactory(new PropertyValueFactory<>("numeSiPrenume"));
         produsColoana.setCellValueFactory(new PropertyValueFactory<>("Mobila"));
         lemnColoana.setCellValueFactory(new PropertyValueFactory<>("Lemn"));
         orasColoana.setCellValueFactory(new PropertyValueFactory<>("oras"));
@@ -53,7 +54,7 @@ public class VizComenziManager {
         stradaColoana.setCellValueFactory(new PropertyValueFactory<>("strada"));
         numarColoana.setCellValueFactory(new PropertyValueFactory<>("numarCasa"));
         asistentaColoana.setCellValueFactory(new PropertyValueFactory<>("asistenta"));
-
+        dataColoana.setCellValueFactory(new PropertyValueFactory<>("Data"));
         comenziTabel.setItems(comenzi);
 
 

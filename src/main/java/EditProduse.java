@@ -10,6 +10,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static javax.swing.JOptionPane.showMessageDialog;
+
 public class EditProduse {
 
     private Stage window1;
@@ -46,8 +48,13 @@ public class EditProduse {
     }
 
     public void DeleteProdus()throws  Exception {
+
             ObservableList<Produs> produsAles;
             produsAles = tableaProduse.getSelectionModel().getSelectedItems();
+            if(produsAles.isEmpty()){
+                showMessageDialog(null, "Nici un element nu este selectat");
+                return;
+            }
             for(Produs produsul : produsAles) {
                 ProdusService.stergereProdus(produsul);
             }

@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import static javax.swing.JOptionPane.showMessageDialog;
+
 public class registrare {
     @FXML
     private Text registrationMessage;
@@ -26,8 +28,20 @@ public class registrare {
     @FXML
     public void handleRegisterAction() {
         try {
+            if(usernameField.getText().equals("")){
+                showMessageDialog(null, "Introduceti numele  de utilizator");
+                return;
+            }
+            if(passwordField.getText().equals("")){
+                showMessageDialog(null, "Introduceti parola");
+                return;
+            }
+            if(role.getValue()==null){
+                showMessageDialog(null, "Alegeti un Rol");
+                return;
+            }
             UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
-            registrationMessage.setText("Account created successfully!");
+            registrationMessage.setText("Cont creeat!");
         } catch (UsernameAlreadyExists e) {
             registrationMessage.setText(e.getMessage());
         }

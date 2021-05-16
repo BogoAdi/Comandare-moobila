@@ -1,44 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controlerTest">
+
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane stylesheets="@style7.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlerTest">
 <children>
-<Label fx:id="lb" alignment="CENTER" layoutY="-5.0" prefHeight="121.0" prefWidth="773.0" style="-fx-background-color: #d2691e;" text="Comandare-Mobila" textAlignment="CENTER">
+<Label fx:id="lb" alignment="CENTER" layoutY="-5.0" prefHeight="121.0" prefWidth="773.0" styleClass="style0" text="Comandare-Mobila" textAlignment="CENTER" textFill="#e9e8f5">
+    <font>
+        <Font size="38.0" />
+    </font></Label>
+<JFXButton fx:id="testbt1" layoutX="492.0" layoutY="445.0" mnemonicParsing="false" onAction="#Next" prefHeight="48.0" prefWidth="152.0" text="Inainte" textFill="#cd1313">
+    <font>
+        <Font size="21.0" />
+    </font></JFXButton>
+<Label fx:id="l1" alignment="CENTER" layoutX="68.0" layoutY="116.0" prefHeight="48.0" prefWidth="656.0" textFill="#dadae8">
+    <font>
+        <Font size="25.0" />
+    </font></Label>
+<Label fx:id="l2" alignment="CENTER" layoutX="68.0" layoutY="164.0" prefHeight="48.0" prefWidth="656.0" stylesheets="@style0.css" textFill="#dadbe4">
+    <font>
+        <Font size="20.0" />
+    </font></Label>
+<Label fx:id="l3" alignment="CENTER" layoutX="58.0" layoutY="212.0" prefHeight="48.0" prefWidth="699.0" textFill="#ceccd7">
+    <font>
+        <Font size="20.0" />
+    </font></Label>
+<Label layoutX="214.0" layoutY="343.0" prefHeight="21.0" prefWidth="398.0" text="Pentru a continua apasati &quot;Inainte&quot;." textFill="#d3d2dd">
     <font>
         <Font size="24.0" />
     </font></Label>
-<Button fx:id="testbt1" layoutX="492.0" layoutY="445.0" mnemonicParsing="false" onAction="#Next" prefHeight="48.0" prefWidth="152.0" text="Inainte">
+<JFXButton fx:id="testbt2" layoutX="108.0" layoutY="445.0" mnemonicParsing="false" onAction="#info" prefHeight="48.0" prefWidth="152.0" style="-fx-border-radius: 30px;" text="Info" textFill="#d31212">
     <font>
-        <Font size="20.0" />
-    </font></Button>
-<Label fx:id="l1" layoutX="168.0" layoutY="142.0" prefHeight="57.0" prefWidth="336.0">
-    <font>
-        <Font size="20.0" />
-    </font></Label>
-<Label fx:id="l2" layoutX="168.0" layoutY="182.0" prefHeight="34.0" prefWidth="522.0">
-    <font>
-        <Font size="20.0" />
-    </font></Label>
-<Label fx:id="l3" layoutX="168.0" layoutY="216.0" prefHeight="21.0" prefWidth="501.0">
-    <font>
-        <Font size="20.0" />
-    </font></Label>
-<Label layoutX="220.0" layoutY="298.0" prefHeight="21.0" prefWidth="398.0" text="Pentru a continua apasati &quot;Inainte&quot;.">
-    <font>
-        <Font size="20.0" />
-    </font></Label>
-<Button fx:id="testbt2" layoutX="108.0" layoutY="445.0" mnemonicParsing="false" onAction="#info" prefHeight="48.0" prefWidth="152.0" style="-fx-border-radius: 30px;" text="Info">
-    <font>
-        <Font size="20.0" />
-    </font></Button>
+        <Font size="22.0" />
+    </font></JFXButton>
+      <Label fx:id="lp1" alignment="CENTER" layoutX="60.0" layoutY="260.0" prefHeight="48.0" prefWidth="699.0" textFill="#e1dbdb">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
 </children>
         </AnchorPane>
-

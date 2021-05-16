@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import static javax.swing.JOptionPane.showMessageDialog;
+
 public class ProdusNou{
 
         private Stage window1;
@@ -34,6 +36,18 @@ public class ProdusNou{
         try{
 
             ProdusService.checkProdusDoesNotAlreadyExist(nume.getText(),lemn.getText());
+            if(nume.getText().equals("")){
+                showMessageDialog(null, "Introduceti numele produsului de mobila");
+                return;
+            }
+            if(lemn.getText().equals("")){
+                showMessageDialog(null, "Introduceti numele lemnului folosit");
+                return;
+            }
+            if(pret.getText().equals("")){
+                showMessageDialog(null, "Introduceti pretul produsului");
+                return;
+            }
             ProdusService.addProdus(nume.getText(), lemn.getText(), Integer.parseInt(pret.getText()));
 
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("meniuManager.fxml"));

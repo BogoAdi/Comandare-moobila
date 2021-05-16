@@ -37,6 +37,8 @@ public class meniuManager {
     }
 
     public void goBack() throws  Exception {
-
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        window1 = (Stage)backButton.getScene().getWindow();
+        window1.setScene(new Scene(root));
     }
 }
